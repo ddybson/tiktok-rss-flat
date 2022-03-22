@@ -6,9 +6,6 @@ from datetime import datetime, timezone
 # Normal GitHub Pages URL
 ghPagesURL = "https://ddybson.github.io/tiktok-rss-flat/"
 
-# Custom Domain
-# ghPagesURL = "https://tiktokrss.conoroneill.com/"
-
 api = TikTokApi()
 
 count = 10
@@ -23,10 +20,10 @@ with open('subscriptions.csv') as f:
         fg = FeedGenerator()
         fg.id('https://www.tiktok.com/@' + user)
         fg.title(user + ' TikTok')
-        fg.author( {'name':'RMF','email':'daniel.dybek@rmf.pl'} )
+        fg.author( {'name':'Conor ONeill','email':'conor@conoroneill.com'} )
         fg.link( href='http://tiktok.com', rel='alternate' )
         fg.logo(ghPagesURL + 'tiktok-rss.png')
-        fg.subtitle('Latest TikToks from ' + user)
+        fg.subtitle('OK Boomer, all the latest TikToks from ' + user)
         fg.link( href=ghPagesURL + 'rss/' + user + '.xml', rel='self' )
         fg.language('en')
 
